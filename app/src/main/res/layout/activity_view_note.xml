@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taz.View_Note"
+    android:background="#000000">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/view_title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#6600ff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.47"
+                android:text="@string/view_detail"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffff00" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/note_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Note Type"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#66ffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/note_type_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:text="@string/note_type"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#99ff66" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="101dp"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/event_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Event Type"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#66ffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/event_type_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:text="@string/event_type"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#99ff66" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_weight="2.20"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="100dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/alarm_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alarmtext"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#9DFA75" />
+
+                    <TextView
+                        android:id="@+id/alertvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#66ffff" />
+
+                    <TextView
+                        android:id="@+id/datevalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#2200FF"
+                    android:textColor="#A6FF00"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Goto"
+                    android:id="@+id/link"
+                     />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

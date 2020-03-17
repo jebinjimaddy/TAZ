@@ -1,0 +1,5 @@
+<root>
+    <item name='android.os.PowerManager.WakeLock'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

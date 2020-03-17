@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.taz.Edit_Note"
+    android:background="#000000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txttitle"
+                android:maxLength="30"
+                android:text="@string/txt_edit_hint"
+                android:textColor="#99ff66"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:singleLine="true"
+                android:backgroundTint="#99ff66"
+                android:editable="true" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView5" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/description"
+                    android:text="@string/detail_hint"
+                    android:textColor="#4E8D35"
+                    android:layout_below="@+id/txttitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="#99ff66"
+                    android:singleLine="false"
+                    android:editable="true"
+                    android:lines="5" />
+            </ScrollView>
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/type_note"
+                    android:id="@+id/txtNoteType"
+                    android:layout_below="@+id/description"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#99ff66"
+                    android:backgroundTint="#99ff66"/>
+
+                <Spinner
+                    android:layout_width="204dp"
+                    android:layout_height="30dp"
+                    android:background="#66ffff"
+                    android:id="@+id/spinnerNoteType"
+                    android:entries="@array/note_type"
+                    android:layout_below="@+id/description"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/txttitle"
+                    android:layout_toRightOf="@+id/txttitle"
+                    android:layout_marginLeft="20dp"
+                    />
+            </GridLayout>
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/description"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Event Type"
+                    android:id="@+id/txteventType"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#99ff66"
+                    android:backgroundTint="#99ff66"/>
+
+                <Spinner
+                    android:layout_width="204dp"
+                    android:layout_height="30dp"
+                    android:background="#66ffff"
+                    android:id="@+id/spinnereventType"
+                    android:entries="@array/event_type"
+                    android:layout_below="@+id/description"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/txttitle"
+                    android:layout_toRightOf="@+id/txttitle"
+                    android:layout_marginLeft="20dp"
+                    />
+            </GridLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerNoteType"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#66ffff"
+                    android:text="@string/set_alert"
+                    android:textColor="#66ffff"
+                    android:id="@+id/chkbox"
+                    android:layout_below="@+id/spinnerNoteType"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#66ffff"
+                    android:text="@string/set_notify"
+                    android:textColor="#66ffff"
+                    android:id="@+id/chkbox2"
+                    android:layout_below="@+id/spinnerNoteType"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/textview_date"
+                    android:textColor="#ffff00"
+                    android:id="@+id/txt_selectdate" />
+
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#464040"
+                    android:id="@+id/datePicker2"
+                    android:layout_below="@+id/chkbox"
+                    android:layout_centerHorizontal="true"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/txt_time"
+                    android:textColor="#ffff00"
+                    android:id="@+id/txt_selecttime" />
+
+                <TimePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#464040"
+                    android:id="@+id/timePicker2"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

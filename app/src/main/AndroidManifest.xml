@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TAZ"
+        android:theme="@style/AppTheme">
+        <activity android:name=".stopwatch"></activity>
+        <activity android:name=".Timer" />
+        <activity android:name=".help" />
+        <activity android:name=".about_us" />
+        <activity
+            android:name=".Lock"
+            android:parentActivityName=".Splashactivity">
+
+        </activity>
+        <activity
+            android:name=".Splashactivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="TAZ"
+            android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.taz.Lock" />
+        </activity>
+        <activity
+            android:name=".CreateNote"
+            android:label="@string/title_activity_create_note">
+            <intent-filter>
+                <action android:name="com.example.dominic.memo.CreateNote" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".View_Note"
+            android:label="@string/title_activity_information" />
+        <activity
+            android:name=".Edit_Note"
+            android:label="@string/title_activity_edit__note" />
+        <activity
+            android:name=".Alert"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".NotificationManager2"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

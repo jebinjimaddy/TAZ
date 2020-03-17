@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0519A5</color>
+    <color name="colorPrimaryDark">#061999</color>
+    <color name="colorAccent">#9966ff</color>
+    <color name="blue">#005</color>
+    <color name="red">#B71C1C</color>
+    <color name="color_preloader_start">#fdb6b6</color>
+    <color name="color_preloader_center">#fdb6b6</color>
+    <color name="color_preloader_end">#ffffff</color>
+    <color name="black">#000</color>
+    <color name="white">#ffffff</color>
+</resources>

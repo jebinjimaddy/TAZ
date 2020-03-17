@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_aboutus" android:title="About Us"
+        android:orderInCategory="101" app:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_help" android:title="Help!"
+        android:orderInCategory="102" app:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_timer" android:title="Set Timer"
+        android:orderInCategory="100" app:showAsAction="always"/>
+    <item android:id="@+id/action_stopwatch" android:title="Stopwatch"
+        android:orderInCategory="100" app:showAsAction="always"/>
+    <item android:id="@+id/action_new"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/New"
+        app:showAsAction="always"
+        />
+</menu>
